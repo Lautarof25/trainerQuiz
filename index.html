@@ -16,36 +16,41 @@
   <header>
     <h1>Trainer<span>Quiz</span></h1>
   </header>
-  <main>
-    <!-- home page -->
-    <!-- <div class="flex-col">
-      <button>Create quiz</button>
-      <button>Play quiz</button>
-    </div> -->
+  <main>      
 
+    <!-- home page -->
+      <div id="home" class="flex-col">
+        <button id="buttonCreate">Create quiz</button>
+        <button id="buttonPlay">Play quiz</button>
+      </div>
 
     <!-- first page - creating quiz -->
-    <!-- <div class="flex-col flex-center">
+    <div id="createNumberQuizzes" class="flex-col flex-center d-none">
       <h2>Creating quiz</h2>
-      <label for="numberQuizes">
-        <input class="inputNumber" id="inputNumber" type="number" min="0" maxlength="9" max="20">
-      </label>
-      <button>Next</button>
-    </div> -->
+      <label for="numberQuizes"> How many questions (max 20)</label>
+      <input class="inputs" id="inputNumber" type="text"
+      pattern="/^([01]?\d|20)$/"
+      maxlength="2">
+      <div>
+        <button id="buttonBackHome">Back</button>
+        <button id="buttonNext">Next</button>
+      </div>
+    </div>
 
     <!-- Second page - creating quiz -->
-    <!-- <div class="flex-col">
+    <div id="createQuizzes" class="flex-col d-none">
       <label for="Subject">Subject</label>
-      <input type="text" placeholder="holidays">
+      <input type="text" class="inputs" placeholder="holidays">
       <label for="Question">Question |1º</label>
-      <textarea name="" id="answer" placeholder="When is it christmas?"></textarea>
+      <textarea name="" class="textAreas" id="answer" placeholder="When is it christmas?"></textarea>
       <label for="AnswerOk">Correct answer</label>
-      <textarea name="" id="" placeholder="25 Dec"></textarea>
+      <textarea name="" class="textAreas" id="" placeholder="25 Dec"></textarea>
       <label for="AnswerWrong1">Wrong answer</label>
-      <textarea name="" id="" placeholder="1 Jan"></textarea>
+      <textarea name="" class="textAreas" id="" placeholder="1 Jan"></textarea>
       <button>+ Add answers</button>
+      <button id="buttonBackCreate">Back</button>
       <button class="">Finish</button>
-    </div> -->
+    </div>
 
     <!-- First page - Select quiz -->
     <!-- <div class="flex-col">
@@ -83,6 +88,8 @@
     </a>
   </footer>
 
+  <script src="./src/js/dom.js"></script>
+  <script src="./src/js/events.js"></script>
 </body>
 
 </html>
