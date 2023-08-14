@@ -16,21 +16,19 @@
   <header>
     <h1>Trainer<span>Quiz</span></h1>
   </header>
-  <main>      
+  <main>
 
     <!-- home page -->
-      <div id="home" class="flex-col">
-        <button id="buttonCreate">Create quiz</button>
-        <button id="buttonPlay">Play quiz</button>
-      </div>
+    <div id="home" class="flex-col">
+      <button id="buttonCreate">Create quiz</button>
+      <button id="buttonPlay">Play quiz</button>
+    </div>
 
     <!-- first page - creating quiz -->
     <div id="createNumberQuizzes" class="flex-col flex-center d-none">
       <h2>Creating quiz</h2>
       <label for="numberQuizes"> How many questions (max 20)</label>
-      <input class="inputs" id="inputNumber" type="text"
-      pattern="/^([01]?\d|20)$/"
-      maxlength="2">
+      <input class="inputs" id="inputNumber" type="text" pattern="/^([01]?\d|20)$/" maxlength="2">
       <div>
         <button id="buttonBackHome">Back</button>
         <button id="buttonNext">Next</button>
@@ -43,42 +41,48 @@
       <input type="text" class="inputs" placeholder="holidays">
       <label for="Question">Question |1º</label>
       <textarea name="" class="textAreas" id="answer" placeholder="When is it christmas?"></textarea>
-      <label for="AnswerOk">Correct answer</label>
+      <label for="AnswerOk">Correct answer <i class="fa-solid fa-circle-check"></i></label>
       <textarea name="" class="textAreas" id="" placeholder="25 Dec"></textarea>
-      <label for="AnswerWrong1">Wrong answer</label>
+      <label for="AnswerWrong1">Wrong answer <i class="fa-solid fa-circle-xmark"></i></label>
       <textarea name="" class="textAreas" id="" placeholder="1 Jan"></textarea>
       <button>+ Add answers</button>
       <button id="buttonBackCreate">Back</button>
-      <button class="">Finish</button>
+      <button id="buttonFinish" class="">Finish</button>
     </div>
 
     <!-- First page - Select quiz -->
-    <!-- <div class="flex-col">
+    <div id="selectQuiz" class="flex-col d-none">
       <label for="select">Select subject</label>
-      <select name="" id="select">
-        <option value="" default>Holidays</option>
-        <option value="">Football</option>
-        <option value="">Science</option>
+      <select class="select" name="" id="select">
+        <option value="holidays" default>Holidays</option>
+        <option value="football">Football</option>
+        <option value="science">Science</option>
       </select>
-      <button>Start Quiz</button>
-    </div> -->
+      <button id="buttonStart">Start Quiz</button>
+    </div>
 
     <!-- Second page - quizzes -->
-    <!-- <div class="flex-col">
+    <div id="playQuiz" class="flex-col d-none">
       <div id="question">When is it Christmas?</div>
-      <button>25 Dec</button>
-      <button>1 jan</button>
-    </div> -->
+      <button id="option1">25 Dec</button>
+      <button id="option2">1 jan</button>
+    </div>
 
     <!-- Third page - Results -->
-    <!-- <div class="flex-col">
+    <div id="result" class="flex-col d-none">
       <div id="results">
-        <p><span>100</span> Points</p>
+        <p><span id="spanResult"></span> Points</p>
       </div>
-    </div> -->
+      <button id="backHomeFinish">Back Home</button>
+    </div>
+
+    <!-- PopUp floating -->
+    <div id="popUp" class="absolute popUp d-none">
+      <p>Esa categoria no está todavia</p>
+    </div>
 
   </main>
-  
+
   <footer>
     <a href="" target="_blank">
       <i class="fa-brands fa-github"></i>

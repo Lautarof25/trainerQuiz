@@ -50,6 +50,29 @@ body {
   align-items: center;
 }
 
+.absolute {
+  max-width: 250px;
+  height: fit-content;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+.popUp {
+  border-radius: 15px;
+  padding: .5rem;
+  text-align: center;
+  background-color: var(--second-color);
+  color: var(--first-color);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
 .divButtons {
   gap: 1rem;
 }
@@ -73,6 +96,14 @@ body {
   -o-border-radius: 15px;
 }
 
+.select {
+  padding: 1rem;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
 
 button {
   all: unset;
