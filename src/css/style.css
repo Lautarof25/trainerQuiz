@@ -25,6 +25,14 @@
   display: none!important;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.fs-2 {
+  font-size: 2rem;
+}
+
 span {
   color: var(--third-color)
 }
@@ -77,27 +85,15 @@ body {
   gap: 1rem;
 }
 
-.inputs{
+.inputs {
   padding: 0.5rem;
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-  font-size: 1.5rem;
 }
 
-.textAreas {
+.textAreas, .select {
   padding: 1rem;
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
 }
 
-.select {
-  padding: 1rem;
+.textAreas, .select,.inputs {
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;

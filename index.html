@@ -27,6 +27,8 @@
     <!-- first page - creating quiz -->
     <div id="createNumberQuizzes" class="flex-col flex-center d-none">
       <h2>Creating quiz</h2>
+      <label for="Subject">Subject</label>
+      <input type="text" id="subject" class="inputs" placeholder="holidays">
       <label for="numberQuizes"> How many questions (max 20)</label>
       <input class="inputs" id="inputNumber" type="text" pattern="/^([01]?\d|20)$/" maxlength="2">
       <div>
@@ -37,8 +39,6 @@
 
     <!-- Second page - creating quiz -->
     <div id="createQuizzes" class="flex-col d-none">
-      <label for="Subject">Subject</label>
-      <input type="text" class="inputs" placeholder="holidays">
       <label for="Question">Question |1º</label>
       <textarea name="" class="textAreas" id="answer" placeholder="When is it christmas?"></textarea>
       <label for="AnswerOk">Correct answer <i class="fa-solid fa-circle-check"></i></label>
@@ -64,14 +64,20 @@
     <!-- Second page - quizzes -->
     <div id="playQuiz" class="flex-col d-none">
       <div id="question">When is it Christmas?</div>
-      <button id="option1">25 Dec</button>
-      <button id="option2">1 jan</button>
+      <div>
+        <input type="radio" name="" id="option1">
+        <label for="option1">25 Dec</label>
+        </div>
+        <div>
+        <input type="radio" name="" id="option2">
+        <label for="option2">1 Jan</label>
+      </div>
     </div>
 
     <!-- Third page - Results -->
     <div id="result" class="flex-col d-none">
       <div id="results">
-        <p><span id="spanResult"></span> Points</p>
+        <p class="text-center fs-2"><span id="spanResult"></span> Points</p>
       </div>
       <button id="backHomeFinish">Back Home</button>
     </div>

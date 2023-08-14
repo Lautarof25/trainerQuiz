@@ -1,4 +1,4 @@
-// Button Quiz -> first page - creating quiz
+// Create Quiz -> first page - creating quiz
 buttonCreate.addEventListener('click', createQuiz)
 
 function createQuiz() {
@@ -6,12 +6,14 @@ function createQuiz() {
     createNumberQuizzes.classList.toggle('d-none')
 }
 
-// Button Quiz -> first page - Save input value
+//  Save input subject
+subject.addEventListener('keyup', saveInputElement)
+//  Save input number questions
+inputNumber.addEventListener('keyup',saveInputElement)
 
-inputNumber.addEventListener('keyup',saveInputValue)
-
-function saveInputValue() {
-    return inputNumber.value
+function saveInputElement(e) {
+    let value = e.target.value
+    return value
 }
 
 buttonNext.addEventListener('click',nextPageQuestion)
@@ -41,6 +43,8 @@ function saveAndBackHome(){
     createQuizzes.classList.toggle('d-none')
     home.classList.toggle('d-none')
 }
+
+// Button play -> first page -> select quizzes
 
 buttonPlay.addEventListener('click',startQuizzes)
 

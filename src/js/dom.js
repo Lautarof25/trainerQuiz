@@ -17,6 +17,7 @@ const buttonFinish = document.querySelector('#buttonFinish')
 const buttonStart = document.querySelector('#buttonStart')
 const backHomeFinish = document.querySelector('#backHomeFinish')
 // Options quizzes
+const subject = document.querySelector('#subject')
 const select = document.querySelector('#select')
 const option1 = document.querySelector('#option1')
 const option2 = document.querySelector('#option2')
