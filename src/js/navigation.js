@@ -4,7 +4,6 @@ buttonCreate.addEventListener('click', createQuiz)
 function createQuiz() {
     home.classList.toggle('d-none')
     createNumberQuizzes.classList.toggle('d-none')
-    console.log("createNumberQuizzes")
 }
 
 buttonNext.addEventListener('click',nextPageQuestion)
@@ -12,7 +11,6 @@ buttonNext.addEventListener('click',nextPageQuestion)
 function nextPageQuestion() {
     createNumberQuizzes.classList.toggle('d-none')
     createQuizzes.classList.toggle('d-none')
-    console.log("createQuizzes")
 }
 
 buttonBackHome.addEventListener('click',backHome)
@@ -27,7 +25,6 @@ buttonBackCreate.addEventListener('click',backCreate)
 function backCreate() {
     createNumberQuizzes.classList.toggle('d-none')
     createQuizzes.classList.toggle('d-none')
-    console.log("createNumberQuizzes")
 }
 
 buttonFinish.addEventListener('click',saveAndBackHome)
@@ -46,10 +43,10 @@ function startQuizzes(){
     selectQuiz.classList.toggle('d-none')
 }
 
-select.addEventListener('change', optionSelectedOk)
+selectSubject.addEventListener('change', optionSelectedOk)
 
 function optionSelectedOk(){
-    return select.value === "holidays" 
+    return selectSubject.value === "holidays" 
 }
 
 buttonStart.addEventListener('click',playQuizzes)

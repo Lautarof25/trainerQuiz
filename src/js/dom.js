@@ -9,6 +9,7 @@ const spanResult = document.querySelector('#spanResult')
 const popUp = document.querySelector('#popUp')
 // Elements Page
 const buttonsCreate = document.querySelector('#buttonsCreate')
+const selectSubject = document.querySelector('#selectSubject')
 // Buttons
 const buttonCreate = document.querySelector('#buttonCreate')
 const buttonPlay = document.querySelector('#buttonPlay')
@@ -20,7 +21,6 @@ const buttonStart = document.querySelector('#buttonStart')
 const backHomeFinish = document.querySelector('#backHomeFinish')
 // Options quizzes
 const subject = document.querySelector('#subject')
-const select = document.querySelector('#select')
 const option1 = document.querySelector('#option1')
 const option2 = document.querySelector('#option2')
 // input number questions

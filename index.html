@@ -67,9 +67,9 @@
     <!-- First page - Select quiz -->
     <div id="selectQuiz" class="flex-col d-none">
       <label for="select">Select subject</label>
-      <select class="select" name="" id="select">
+      <select class="select" name="" id="selectSubject">
         <!-- Dynamic -->
-        <option value="holidays" default>Holidays</option>
+        <!-- <option value="holidays" default>Holidays</option> -->
       </select>
       <button id="buttonStart">Start Quiz</button>
     </div>
@@ -79,11 +79,11 @@
       <h2 id="question">When is it Christmas?</h2>
       <div id="">
         <!-- Dynamic -->
-        <input type="radio" name="" id="option1">
+        <input type="radio" name="options" id="option1">
         <label for="option1">25 Dec</label>
         </div>
         <div>
-        <input type="radio" name="" id="option2">
+        <input type="radio" name="options" id="option2">
         <label for="option2">1 Jan</label>
       </div>
     </div>
@@ -116,6 +116,7 @@
   <script src="./src/js/dom.js"></script>
   <script src="./src/js/navigation.js"></script>
   <script src="./src/js/createQuestion.js"></script>
+  <script src="./src/js/addQuestion.js"></script>
 </body>
 
 </html>
