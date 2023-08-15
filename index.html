@@ -39,14 +39,26 @@
 
     <!-- Second page - creating quiz -->
     <div id="createQuizzes" class="flex-col d-none">
-      <label for="Question">Question |1º</label>
-      <textarea name="" class="textAreas" id="answer" placeholder="When is it christmas?"></textarea>
+      <!-- Dynamic -->
+      <label for="Question">Question <span>1º</span></label>
+      <textarea name="" class="textAreas" id="answerNum" placeholder="When is it christmas?"></textarea>
       <label for="AnswerOk">Correct answer <i class="fa-solid fa-circle-check"></i></label>
-      <textarea name="" class="textAreas" id="" placeholder="25 Dec"></textarea>
+      <textarea name="" class="textAreas" id="optionOk" placeholder="25 Dec"></textarea>
       <label for="AnswerWrong1">Wrong answer <i class="fa-solid fa-circle-xmark"></i></label>
-      <textarea name="" class="textAreas" id="" placeholder="1 Jan"></textarea>
-      <button>+ Add answers</button>
-      <button id="buttonBackCreate">Back</button>
+      <textarea name="" class="textAreas" id="optionWrong" placeholder="1 Jan"></textarea>
+      <button id="buttonAddAnswers">+ Add answers</button>
+      <!-- If add more answer -->
+
+      <!-- <label for="AnswerWrong1">Wrong answer <i class="fa-solid fa-circle-xmark"></i></label>
+      <textarea name="" class="textAreas" id="optionWrong2" placeholder="1 Jan"></textarea> -->
+      <!-- <button id="removeAnswer2">Remove answer</button> -->
+
+      <div>
+        <button id="buttonBackCreate">Back</button>
+        <!-- If more than 1 question -->
+        <button id="buttonNextCreate">Next</button>
+      </div>
+      <!-- Appear if is the last question -->
       <button id="buttonFinish" class="">Finish</button>
     </div>
 
@@ -54,17 +66,17 @@
     <div id="selectQuiz" class="flex-col d-none">
       <label for="select">Select subject</label>
       <select class="select" name="" id="select">
+        <!-- Dynamic -->
         <option value="holidays" default>Holidays</option>
-        <option value="football">Football</option>
-        <option value="science">Science</option>
       </select>
       <button id="buttonStart">Start Quiz</button>
     </div>
 
     <!-- Second page - quizzes -->
     <div id="playQuiz" class="flex-col d-none">
-      <div id="question">When is it Christmas?</div>
-      <div>
+      <h2 id="question">When is it Christmas?</h2>
+      <div id="">
+        <!-- Dynamic -->
         <input type="radio" name="" id="option1">
         <label for="option1">25 Dec</label>
         </div>
@@ -77,6 +89,7 @@
     <!-- Third page - Results -->
     <div id="result" class="flex-col d-none">
       <div id="results">
+        <!-- Dynamic -->
         <p class="text-center fs-2"><span id="spanResult"></span> Points</p>
       </div>
       <button id="backHomeFinish">Back Home</button>
@@ -84,7 +97,7 @@
 
     <!-- PopUp floating -->
     <div id="popUp" class="absolute popUp d-none">
-      <p>Esa categoria no está todavia</p>
+      <p>Información</p>
     </div>
 
   </main>
@@ -99,7 +112,8 @@
   </footer>
 
   <script src="./src/js/dom.js"></script>
-  <script src="./src/js/events.js"></script>
+  <script src="./src/js/navigation.js"></script>
+  <script src="./src/js/createQuestion.js"></script>
 </body>
 
 </html>
