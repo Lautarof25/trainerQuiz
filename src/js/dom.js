@@ -7,6 +7,8 @@ const playQuizz = document.querySelector('#playQuizz')
 const result = document.querySelector('#result')
 const spanResult = document.querySelector('#spanResult')
 const popUp = document.querySelector('#popUp')
+// Elements Page
+const buttonsCreate = document.querySelector('#buttonsCreate')
 // Buttons
 const buttonCreate = document.querySelector('#buttonCreate')
 const buttonPlay = document.querySelector('#buttonPlay')

@@ -48,6 +48,10 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.flex {
+  display: flex;
+}
+
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -100,6 +104,12 @@ body {
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
+
+#createQuizzes > div:nth-of-type(2n) {
+  margin: 1rem;
+}
+
+
 
 button {
   all: unset;
