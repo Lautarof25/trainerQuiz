@@ -52,15 +52,8 @@ function optionSelectedOk(){
 buttonStart.addEventListener('click',playQuizzes)
 
 function playQuizzes() {
-    if(optionSelectedOk()){
-        selectQuiz.classList.toggle('d-none')
-        playQuiz.classList.toggle('d-none')
-    }else {
-        popUp.classList.toggle('d-none')
-        setTimeout(() => {
-            popUp.classList.toggle('d-none')
-        }, 2500);
-    }
+    selectQuiz.classList.toggle('d-none')
+    playQuiz.classList.toggle('d-none')
 }
 
 option1.addEventListener('click',hitAnswer)

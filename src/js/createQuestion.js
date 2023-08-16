@@ -12,8 +12,8 @@ function saveInputNumbers() {
 
 function createQuestions(){
     for (let i = 0; i < saveInputNumbers(); i++) {
-        createQuestionDefault(i+1)
-        createQuestionAnswers(i+1)
+        createQuestionDefault(i)
+        createQuestionAnswers(i)
     }
 }
 
@@ -22,15 +22,15 @@ function createQuestionDefault(idNumber) {
     div.setAttribute('id', `default${idNumber}`)
     div.setAttribute('class', "flex-col")
     const label = document.createElement('label')
-    label.setAttribute('for', `answer${idNumber}`)
+    label.setAttribute('for', `questionLabel${idNumber}`)
     const textLabel = document.createTextNode("Question ")
     const span = document.createElement('span')
-    const textSpan = document.createTextNode(`${idNumber}º`)
+    const textSpan = document.createTextNode(`${idNumber+1}º`)
     span.appendChild(textSpan)
     label.append(textLabel,span)
 
     const textarea = document.createElement('textarea')
-    textarea.setAttribute('id', `answer${idNumber}`)
+    textarea.setAttribute('id', `question${idNumber}`)
     textarea.setAttribute('placeholder', "Is the earth flat?")
     textarea.setAttribute('class', "textAreas")
     // Falta asignar elemento padre
@@ -41,7 +41,7 @@ function createQuestionDefault(idNumber) {
 
 function createQuestionAnswers(idNumber) {
     const div = document.createElement('div')
-    div.setAttribute('id', `questions${idNumber}`)
+    div.setAttribute('id', `answers${idNumber}`)
     div.setAttribute('class', "flex-col")
     // Correcto answer
     const label1 = document.createElement('label')
