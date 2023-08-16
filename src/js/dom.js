@@ -10,6 +10,7 @@ const spanResult = document.querySelector('#spanResult')
 const popUp = document.querySelector('#popUp')
 const buttonsCreate = document.querySelector('#buttonsCreate')
 const selectSubject = document.querySelector('#selectSubject')
+const divOptions = document.querySelector('#divOptions')
 // Buttons
 const buttonCreate = document.querySelector('#buttonCreate')
 const buttonPlay = document.querySelector('#buttonPlay')

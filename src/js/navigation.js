@@ -56,8 +56,6 @@ function playQuizzes() {
     playQuiz.classList.toggle('d-none')
 }
 
-option1.addEventListener('click',hitAnswer)
-option2.addEventListener('click',wrongAnswer)
 
 function hitAnswer(){
     spanResult.textContent = "100"
