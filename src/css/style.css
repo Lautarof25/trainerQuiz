@@ -83,6 +83,32 @@ body {
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
+  animation:  appear 4s ease-in-out;
+  -webkit-animation:  appear 4s ease-in-out;
+  top: -155px;
+}
+
+.opacity {
+  opacity: 0;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    top: -50px;
+  }
+  25% {
+    opacity: 1;
+    top: 0px;
+  }
+  75% {
+    opacity: 1;
+    top: 0px;
+  }
+  100% {
+    opacity: 0;
+    top: -50px;
+  }
 }
 
 .divButtons {

@@ -34,7 +34,7 @@ function createQuestions(){
         setTimeout(() => {
             popUp.classList.toggle("d-none")
             popUpMessage.textContent = ""
-        }, 3000)
+        }, 4000)
     }
 }
 
