@@ -6,13 +6,6 @@ function createQuiz() {
     createNumberQuizzes.classList.toggle('d-none')
 }
 
-buttonNext.addEventListener('click',nextPageQuestion)
-
-function nextPageQuestion() {
-    createNumberQuizzes.classList.toggle('d-none')
-    createQuizzes.classList.toggle('d-none')
-}
-
 buttonBackHome.addEventListener('click',backHome)
 
 function backHome() {
@@ -55,7 +48,6 @@ function playQuizzes() {
     selectQuiz.classList.toggle('d-none')
     playQuiz.classList.toggle('d-none')
 }
-
 
 function hitAnswer(){
     spanResult.textContent = "100"

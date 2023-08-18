@@ -30,7 +30,8 @@
       <label for="Subject">Subject</label>
       <input type="text" id="subject" class="inputs" placeholder="holidays">
       <label for="numberQuizes"> How many questions (max 20)</label>
-      <input class="inputs" id="inputNumber" type="text" pattern="/^([01]?\d|20)$/" maxlength="2">
+      <input class="inputs" id="inputNumber" type="text"
+      required maxlength="2">
       <div>
         <button id="buttonBackHome">Back</button>
         <button id="buttonNext">Next</button>
@@ -89,6 +90,7 @@
         </div>
       </div> -->
       <button id="submitAnswers">Submit</button>
+      <button id="backHomePlay">Back</button>
     </div>
 
     <!-- Third page - Results -->
@@ -102,7 +104,7 @@
 
     <!-- PopUp floating -->
     <div id="popUp" class="absolute popUp d-none">
-      <p>Información</p>
+      <p id="popUpMessage"></p>
     </div>
 
   </main>

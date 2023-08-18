@@ -7,15 +7,6 @@ function createOptionsSubject(){
     selectSubject.appendChild(option)
 }
 
-{/* <div id="selectQuiz" class="flex-col d-none">
-<label for="select">Select subject</label>
-<select class="select" name="" id="selectSubject">
-  <!-- Dynamic -->
-  <option value="holidays" default>Holidays</option>
-</select>
-<button id="buttonStart">Start Quiz</button>
-</div> */}
-
 buttonPlay.addEventListener('click',createOptionsSubject)
 
 let questionsArray = []
@@ -78,15 +69,3 @@ function addQuestionsPlay(){
 buttonStart.addEventListener('click', function(){
   addQuestionsPlay()
 })
-
-{/* 
-<div id="questionOption0">
-  <h2 id="questionNumber">When is it Christmas?</h2>
-  <div id="divOptions0">
-    <input type="radio" name="options" id="option1" value="25 Dec">
-    <label for="option1">25 Dec</label>
-  </div>
-  <div id="divOptions1">
-    <input type="radio" name="options" id="option2" value="1 Jan">
-    <label for="option2">1 Jan</label>
-</div>*/}

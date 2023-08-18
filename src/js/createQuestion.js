@@ -11,9 +11,36 @@ function saveInputNumbers() {
 }
 
 function createQuestions(){
-    for (let i = 0; i < saveInputNumbers(); i++) {
-        createQuestionDefault(i)
-        createQuestionAnswers(i)
+
+    if(saveInputNumbers() > 0 && saveInputSubject() != ""){
+        for (let i = 0; i < saveInputNumbers(); i++) {
+            createQuestionDefault(i)
+            createQuestionAnswers(i)
+        }
+    nextPageQuestion()
+    }else {
+        const message = ["subject","and","number greater than zero"]
+        if(saveInputNumbers() > 0){
+            messagePopUp(message,0)
+        }else if (saveInputSubject() != ""){
+            messagePopUp(message,2)
+        }else {
+            popUp.classList.toggle("d-none")
+            popUpMessage.textContent = "Please enter a " + message[0] +" " + message[1] +" "+
+            message[2]
+            setTimeout(() => {
+                popUp.classList.toggle("d-none")
+                popUpMessage.textContent = ""
+            }, 3000)
+        }
+    }
+    function messagePopUp(message,index) {
+        popUp.classList.toggle("d-none")
+        popUpMessage.textContent = "Please enter a " + message[index]
+        setTimeout(() => {
+            popUp.classList.toggle("d-none")
+            popUpMessage.textContent = ""
+        }, 3000)
     }
 }
 
@@ -33,8 +60,6 @@ function createQuestionDefault(idNumber) {
     textarea.setAttribute('id', `question${idNumber}`)
     textarea.setAttribute('placeholder', "Is the earth flat?")
     textarea.setAttribute('class', "textAreas")
-    // Falta asignar elemento padre
-    // Revisar si se puede guardar en un return
     div.append(label,textarea)
     createQuizzes.insertBefore(div,buttonsCreate)
 }
@@ -68,12 +93,14 @@ function createQuestionAnswers(idNumber) {
     textarea2.setAttribute('id', `answerWrong${idNumber}`)
     textarea2.setAttribute('placeholder', "No")
     textarea2.setAttribute('class', "textAreas")
-    // Falta asignar elemento padre
-    // Revisar si se puede guardar en un return
     div.append(label1,textarea1,label2,textarea2)
     createQuizzes.insertBefore(div,buttonsCreate)
 }
 
+function nextPageQuestion() {
+    createNumberQuizzes.classList.toggle('d-none')
+    createQuizzes.classList.toggle('d-none')
+}
 buttonNext.addEventListener('click',createQuestions)
 buttonBackCreate.addEventListener('click',eliminateFirstElements)
 buttonFinish.addEventListener('click',saveAndBackHome) // It has to save all element values
