@@ -21,22 +21,16 @@ function createQuestions(){
     }else {
         const message = ["subject","and","number greater than zero"]
         if(saveInputNumbers() > 0){
-            messagePopUp(message,0)
+            messagePopUp(message[0])
         }else if (saveInputSubject() != ""){
-            messagePopUp(message,2)
+            messagePopUp(message[2])
         }else {
-            popUp.classList.toggle("d-none")
-            popUpMessage.textContent = "Please enter a " + message[0] +" " + message[1] +" "+
-            message[2]
-            setTimeout(() => {
-                popUp.classList.toggle("d-none")
-                popUpMessage.textContent = ""
-            }, 3000)
+            messagePopUp(message[0]+" "+message[1]+" "+message[2])
         }
     }
-    function messagePopUp(message,index) {
+    function messagePopUp(message) {
         popUp.classList.toggle("d-none")
-        popUpMessage.textContent = "Please enter a " + message[index]
+        popUpMessage.textContent = "Please enter a " + message
         setTimeout(() => {
             popUp.classList.toggle("d-none")
             popUpMessage.textContent = ""
