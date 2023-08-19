@@ -70,23 +70,29 @@ buttonStart.addEventListener('click', function(){
   addQuestionsPlay()
 })
 
+buttonFinish.addEventListener('click',validateQuestionsAndAnswers) // It has to save all element values
 // Validations questions 
+let activatePopUpMessage = false
+
 function validateSingleQuestionAndItAnswers(idNumber){
-  const message = ["your question and answers"]
   const tempQuestion = document.querySelector(`#question${idNumber}`).value
   const tempAnswerOk = document.querySelector(`#answerOk${idNumber}`).value
   const tempAnswerWrong = document.querySelector(`#answerWrong${idNumber}`).value
-  if(tempQuestion == "" || tempAnswerOk == "" || tempAnswerWrong == ""){
-    messagePopUp(message[0])
+  if(tempQuestion === "" || tempAnswerOk === "" || tempAnswerWrong === ""){
+    activatePopUpMessage = true  
   }
 }
 
 function validateQuestionsAndAnswers(){
-  for (let i = 0; i < answersArray.length; i++){
+  const message = ["question and answers"]
+  for (let i = 0; i < Number(saveInputNumbers()); i++){
     validateSingleQuestionAndItAnswers(i)
+  }
+  if(activatePopUpMessage){
+    messagePopUp(message[0])
+    activatePopUpMessage = false
   }
 }
 
-buttonFinish.addEventListener('click',validateQuestionsAndAnswers) // It has to save all element values
 
 //buttonFinish.addEventListener()
