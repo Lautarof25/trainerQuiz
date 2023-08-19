@@ -20,7 +20,7 @@ function backCreate() {
     createQuizzes.classList.toggle('d-none')
 }
 
-buttonFinish.addEventListener('click',saveAndBackHome)
+//buttonFinish.addEventListener('click',saveAndBackHome)
 
 function saveAndBackHome(){
     createQuizzes.classList.toggle('d-none')

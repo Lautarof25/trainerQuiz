@@ -28,14 +28,15 @@ function createQuestions(){
             messagePopUp(message[0]+" "+message[1]+" "+message[2])
         }
     }
-    function messagePopUp(message) {
+}
+
+function messagePopUp(message) {
+    popUp.classList.toggle("d-none")
+    popUpMessage.textContent = "Please enter a " + message
+    setTimeout(() => {
         popUp.classList.toggle("d-none")
-        popUpMessage.textContent = "Please enter a " + message
-        setTimeout(() => {
-            popUp.classList.toggle("d-none")
-            popUpMessage.textContent = ""
-        }, 4000)
-    }
+        popUpMessage.textContent = ""
+    }, 4000)
 }
 
 function createQuestionDefault(idNumber) {
@@ -43,7 +44,7 @@ function createQuestionDefault(idNumber) {
     div.setAttribute('id', `default${idNumber}`)
     div.setAttribute('class', "flex-col")
     const label = document.createElement('label')
-    label.setAttribute('for', `questionLabel${idNumber}`)
+    label.setAttribute('for', `question${idNumber}`)
     const textLabel = document.createTextNode("Question ")
     const span = document.createElement('span')
     const textSpan = document.createTextNode(`${idNumber+1}º`)
@@ -97,7 +98,7 @@ function nextPageQuestion() {
 }
 buttonNext.addEventListener('click',createQuestions)
 buttonBackCreate.addEventListener('click',eliminateFirstElements)
-buttonFinish.addEventListener('click',saveAndBackHome) // It has to save all element values
+
 
 function eliminateFirstElements(){
     while(createQuizzes.childElementCount >= 3){

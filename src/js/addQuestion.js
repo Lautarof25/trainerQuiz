@@ -28,7 +28,7 @@ function getAnswers(){
 
 buttonFinish.addEventListener('click',getQuestions)
 buttonFinish.addEventListener('click',getAnswers)
-buttonFinish.addEventListener('click',saveAndBackHome)
+//buttonFinish.addEventListener('click',saveAndBackHome)
 
 function addQuestion(idNumber){
   const div = document.createElement('div')
@@ -69,3 +69,24 @@ function addQuestionsPlay(){
 buttonStart.addEventListener('click', function(){
   addQuestionsPlay()
 })
+
+// Validations questions 
+function validateSingleQuestionAndItAnswers(idNumber){
+  const message = ["your question and answers"]
+  const tempQuestion = document.querySelector(`#question${idNumber}`).value
+  const tempAnswerOk = document.querySelector(`#answerOk${idNumber}`).value
+  const tempAnswerWrong = document.querySelector(`#answerWrong${idNumber}`).value
+  if(tempQuestion == "" || tempAnswerOk == "" || tempAnswerWrong == ""){
+    messagePopUp(message[0])
+  }
+}
+
+function validateQuestionsAndAnswers(){
+  for (let i = 0; i < answersArray.length; i++){
+    validateSingleQuestionAndItAnswers(i)
+  }
+}
+
+buttonFinish.addEventListener('click',validateQuestionsAndAnswers) // It has to save all element values
+
+//buttonFinish.addEventListener()
